@@ -1,0 +1,116 @@
+.#{$pre}wrap {
+    @include make-wrap();
+}
+
+.#{$pre}row {
+    @include make-row();
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-xs-#{$i} {
+        @include make-xs-column($i);
+    }
+}
+
+// 小
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-sm-#{$i} {
+        @include make-sm-column($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-sm-offset-#{$i} {
+        @include make-sm-column-offset($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-sm-push-#{$i} {
+        @include make-sm-column-push($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-sm-pull-#{$i} {
+        @include make-sm-column-pull($i);
+    }
+}
+
+// 中等
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-md-#{$i} {
+        @include make-md-column($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-md-offset-#{$i} {
+        @include make-md-column-offset($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-md-push-#{$i} {
+        @include make-md-column-push($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-md-pull-#{$i} {
+        @include make-md-column-pull($i);
+    }
+}
+
+// 大
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-lg-#{$i} {
+        @include make-lg-column($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-lg-offset-#{$i} {
+        @include make-lg-column-offset($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-lg-push-#{$i} {
+        @include make-lg-column-push($i);
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .#{$pre}col-lg-pull-#{$i} {
+        @include make-lg-column($i);
+    }
+}
+
+// @each $type in sm,
+// md,
+// lg {
+//     @for $i from 1 through $grid-columns {
+//         .#{$pre}col-#{$type}-#{$i} {
+//             @include make-#{$type}-column($i);
+//         }
+//     }
+
+//     @for $i from 1 through $grid-columns {
+//         .#{$pre}col-#{$type}-offset-#{$i} {
+//             @include make-#{$type}-column-offset($i);
+//         }
+//     }
+
+//     @for $i from 1 through $grid-columns {
+//         .#{$pre}col-#{$type}-push-#{$i} {
+//             @include make-#{$type}-column-push($i);
+//         }
+//     }
+
+//     @for $i from 1 through $grid-columns {
+//         .#{$pre}col-#{$type}-pull-#{$i} {
+//             @include make-#{$type}-column-push($i);
+//         }
+//     }
+// }
