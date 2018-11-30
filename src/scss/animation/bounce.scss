@@ -1,0 +1,236 @@
+@import '../variables.scss';
+
+//=================================
+//弹入
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    70% {
+        transform: scale3d(.9, .9, .9);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.#{$apre}bounce-in {
+    animation-name: bounceIn;
+}
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.#{$apre}bounce-in-down {
+    animation-name: bounceInDown;
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, -5px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.#{$apre}bounce-in-up {
+    animation-name: bounceInUp;
+}
+
+@keyframes bounceInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.#{$apre}bounce-in-left {
+    animation-name: bounceInLeft;
+}
+
+@keyframes bounceInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(-25px, 0, 0);
+    }
+
+    75% {
+        transform: translate3d(10px, 0, 0);
+    }
+
+    90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.#{$apre}bounce-in-right {
+    animation-name: bounceInRight;
+}
+
+
+//=========================================
+//弹出
+@keyframes bounceOut {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    25% {
+        transform: scale3d(.95, .95, .95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+}
+
+.#{$apre}bounce-out {
+    animation-name: bounceOut;
+}
+
+@keyframes bounceOutDown {
+    20% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 2000px, 0);
+    }
+}
+
+.#{$apre}bounce-out-down {
+    animation-name: bounceOutDown;
+}
+
+@keyframes bounceOutUp {
+    20% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    45% {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(0, -2000px, 0);
+    }
+}
+
+.#{$apre}bounce-out-up {
+    animation-name: bounceOutUp;
+}
+
+@keyframes bounceOutLeft {
+    20% {
+        opacity: 1;
+        transform: translate3d(20px, 0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(-2000px, 0, 0);
+    }
+}
+.#{$apre}bounce-out-left {
+    animation-name: bounceOutLeft;
+}
+
+@keyframes bounceOutRight {
+    20% {
+        opacity: 1;
+        transform: translate3d(-20px, 0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0);
+    }
+}
+.#{$apre}bounce-out-right {
+    animation-name: bounceOutRight;
+}

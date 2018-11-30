@@ -1,0 +1,152 @@
+@import '../variables.scss';
+
+//=================================
+//进入
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.#{$apre}fade-in {
+    animation-name: fadeIn;
+}
+
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.#{$apre}fade-in-down {
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.#{$apre}fade-in-up {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.#{$apre}fade-in-left {
+    animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.#{$apre}fade-in-right {
+    animation-name: fadeInRight;
+}
+
+//=================================
+//退出
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+.#{$apre}fade-out {
+    animation-name: fadeOut;
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+.#{$apre}fade-out-down {
+    animation-name: fadeOutDown;
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+}
+.#{$apre}fade-out-up {
+    animation-name: fadeOutUp;
+}
+
+@keyframes fadeOutLeft {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+.#{$apre}fade-out-left {
+    animation-name: fadeOutLeft;
+}
+
+@keyframes fadeOutRight {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+}
+.#{$apre}fade-out-right {
+    animation-name: fadeOutRight;
+}

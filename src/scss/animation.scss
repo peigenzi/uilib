@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+//淡入
+@each $name in fade-in, fade-in-down, fade-in-up, fade-in-left, fade-in-right {
+    .#{$apre}#{$name} {
+        animation: $fade-in-s ease-out backwards;
+    }
+}
+
+// 淡出
+@each $name in fade-out, fade-out-down, fade-out-up, fade-out-left, fade-out-right {
+    .#{$apre}#{$name} {
+        animation: $fade-out-s ease-in forwards;
+    }
+}
+
+// 弹入
+@each $name in bounce-in, bounce-in-down, bounce-in-up, bounce-in-left, bounce-in-right {
+    .#{$apre}#{$name} {
+        animation: $bounce-in-s ease-out backwards;
+    }
+}
+
+//弹出
+@each $name in bounce-out, bounce-out-down, bounce-out-up, bounce-out-left, bounce-out-right {
+    .#{$apre}#{$name} {
+        animation: $bounce-out-s ease-in forwards;
+    }
+}
+
+@import './animation/fade.scss';
+@import './animation/bounce.scss';
+

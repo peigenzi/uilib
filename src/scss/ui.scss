@@ -1,14 +1,7 @@
 @import 'reset.scss';
 @import 'variables.scss';
-// @import 'extends.scss';
 @import 'mixins.scss';
 @import 'grid.scss';
 @import 'utils.scss';
-
-// .clearfix {
-//     @include clearfix();
-// }
-
-// .size {
-//     @include ellipsis();
-// }
+@import 'pxborder.scss';
+@import 'animation.scss';

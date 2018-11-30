@@ -1,0 +1,481 @@
+@mixin clearfix() {
+
+    &::before,
+    &::after {
+        content: " ";
+        display: table;
+    }
+
+    &::after {
+        clear: both;
+    }
+}
+
+// 1px 边框
+@mixin px-border-t() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-b() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-l() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+@mixin px-border-r() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+//第二条
+@mixin px-border-tt() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-bb() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-ll() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+@mixin px-border-rr() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+// 容器元素
+@mixin make-wrap() {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    @include clearfix();
+}
+
+// 行
+@mixin make-row($gutter: $grid-gutter-width) {
+    margin-left: ($gutter / -2);
+    margin-right: ($gutter / -2);
+    @include clearfix();
+}
+
+// 超小屏幕栅格
+@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+    position: relative;
+    float: left;
+    width: percentage($columns / $grid-columns);
+    min-height: 1px;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+}
+
+// 小屏幕栅格
+@mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+
+    @media (min-width: $screen-sm) {
+        width: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-sm-column-offset($columns) {
+    @media (min-width: $screen-sm) {
+        margin-left: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-sm-column-push($columns) {
+    @media (min-width: $screen-sm) {
+        left: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-sm-column-pull($columns) {
+    @media (min-width: $screen-sm) {
+        right: percentage($columns / $grid-columns);
+    }
+}
+
+// 中等屏幕栅格
+@mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+
+    @media (min-width: $screen-md) {
+        width: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-md-column-offset($columns) {
+    @media (min-width: $screen-md) {
+        margin-left: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-md-column-push($columns) {
+    @media (min-width: $screen-md) {
+        left: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-md-column-pull($columns) {
+    @media (min-width: $screen-md) {
+        right: percentage($columns / $grid-columns);
+    }
+}
+
+// 大屏幕栅格
+@mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+
+    @media (min-width: $screen-lg) {
+        width: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-lg-column-offset($columns) {
+    @media (min-width: $screen-lg) {
+        margin-left: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-lg-column-push($columns) {
+    @media (min-width: $screen-lg) {
+        left: percentage($columns / $grid-columns);
+    }
+}
+
+@mixin make-lg-column-pull($columns) {
+    @media (min-width: $screen-lg) {
+        right: percentage($columns / $grid-columns);
+    }
+}
+
+// utils=============================================
+//内边距
+@mixin make-p-t($mpunit, $i) {
+    padding-top: ($mpunit * $i) !important;
+}
+
+@mixin make-p-r($mpunit, $i) {
+    padding-right: ($mpunit * $i) !important;
+}
+
+@mixin make-p-b($mpunit, $i) {
+    padding-bottom: ($mpunit * $i) !important;
+}
+
+@mixin make-p-l($mpunit, $i) {
+    padding-left: ($mpunit * $i) !important;
+}
+
+@mixin make-p-x($mpunit, $i) {
+    padding-left: ($mpunit * $i) !important;
+    padding-right: ($mpunit * $i) !important;
+}
+
+@mixin make-p-y($mpunit, $i) {
+    padding-top: ($mpunit * $i) !important;
+    padding-bottom: ($mpunit * $i) !important;
+}
+
+//外边距
+@mixin make-m-t($mpunit, $i) {
+    margin-top: ($mpunit * $i) !important;
+}
+
+@mixin make-m-r($mpunit, $i) {
+    margin-right: ($mpunit * $i) !important;
+}
+
+@mixin make-m-b($mpunit, $i) {
+    margin-bottom: ($mpunit * $i) !important;
+}
+
+@mixin make-m-l($mpunit, $i) {
+    margin-left: ($mpunit * $i) !important;
+}
+
+@mixin make-m-x($mpunit, $i) {
+    margin-left: ($mpunit * $i) !important;
+    margin-right: ($mpunit * $i) !important;
+}
+
+@mixin make-m-y($mpunit, $i) {
+    margin-top: ($mpunit * $i) !important;
+    margin-bottom: ($mpunit * $i) !important;
+}
+
+// 字体
+@mixin make-fs($i) {
+    font-size: $i * 1px;
+    font-size: ($i / 16) * 1rem;
+}
+
+// 块居中
+@mixin center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//单行超出省略
+@mixin ellipsis() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+//常见布局
+//含有调试用的代码
+
+//两列左侧定宽右侧自适应
+@mixin f-ldrz($left: 230px) {
+    @include clearfix();
+
+    .g-sd {
+        position: relative;
+        /* 提升层叠顺序，避免被 g-mn 覆盖 */
+        float: left;
+        width: $left;
+        margin-right: -($left);
+        background: yellow;
+    }
+
+    .g-mn {
+        float: right;
+        width: 100%;
+    }
+
+    .g-mnc {
+        margin-left: ($left + 10px);
+        background: #3385ff;
+    }
+
+    p {
+        height: 300px;
+    }
+}
+
+// 两列左侧自适应右侧定宽
+@mixin f-lzrd($right: 230px) {
+    @include clearfix();
+
+    .g-sd {
+        position: relative;
+        float: right;
+        width: $right;
+        margin-left: -($right);
+        background: yellow;
+    }
+
+    .g-mn {
+        float: left;
+        width: 100%;
+    }
+
+    .g-mnc {
+        margin-right: ($right + 10px);
+        background: #3385ff;
+    }
+
+    p {
+        height: 300px;
+    }
+}
+
+// 三列左右定宽中间自适应
+@mixin f-zdczrd($width: 230px) {
+    @include clearfix();
+
+    .g-sd1 {
+        position: relative;
+        float: left;
+        width: $width;
+        margin-right: -($width);
+        background: yellow;
+    }
+
+    .g-sd2 {
+        position: relative;
+        float: right;
+        width: $width;
+        margin-left: -($width);
+        background: green;
+    }
+
+    .g-mn {
+        float: left;
+        width: 100%;
+    }
+
+    .g-mnc {
+        margin-left: ($width + 10px);
+        margin-right: ($width + 10px);
+        background: #3385ff;
+    }
+
+    p {
+        height: 300px;
+    }
+}
+
+@mixin full-window() {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+//底部粘连布局
+@mixin sticky-ft($height: 60px) {
+    .g-doc {
+        position: relative;
+        min-height: 100%;
+    }
+
+    .g-bd {
+        padding: 0 0 $height;
+    }
+
+    .g-ft {
+        height: ($height - 10px);
+        margin: -($height - 10px) 0 0;
+    }
+}

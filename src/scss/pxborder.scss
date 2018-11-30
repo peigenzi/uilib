@@ -1,0 +1,63 @@
+//1px边框
+
+// [class*=pixel-border] {
+//     position: relative;
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         z-index: 1;
+//         pointer-events: none;
+//         background-color: $blineColor;
+//     }
+// }
+
+// .pixel-border-t::before {
+//     height: 1px;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     transform: scaleY(0.5);
+// }
+
+
+// .pixel-border-l:before {
+//     border-left: 1px solid $blineColor;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     transform: scaleX(0.5);
+// }
+
+// .pixel-border-b:before {
+//     border-bottom: 1px solid $blineColor;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     transform: scaleY(0.5);
+// }
+
+.pixel-border-t {
+    @include px-border-t();
+}
+.pixel-border-b {
+    @include px-border-b();
+}
+.pixel-border-l {
+    @include px-border-l();
+}
+.pixel-border-r {
+    @include px-border-r();
+}
+
+.pixel-border-tt {
+    @include px-border-tt();
+}
+.pixel-border-bb {
+    @include px-border-bb();
+}
+.pixel-border-ll {
+    @include px-border-ll();
+}
+.pixel-border-rr {
+    @include px-border-rr();
+}

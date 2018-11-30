@@ -34,6 +34,20 @@ gulp.task('css', () => {
         .pipe(gulp.dest('dist/scss'));
 });
 
+gulp.task('utilcss', () => {
+    return gulp.src('./src/scss/utils.scss')
+        .pipe(plumber())
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
+        .pipe(autoprefixer('last 3 version', 'ie 8'))
+        .pipe(rename('utils.css'))
+        .pipe(gulp.dest('./dist/scss'))
+        .pipe(minifyCss())
+        .pipe(rename('utils.min.css'))
+        .pipe(gulp.dest('dist/scss'));
+});
+
 gulp.task('html', () => {
     return gulp.src('./src/**/*.html')
         .pipe(gulp.dest('./dist'))
@@ -49,7 +63,7 @@ gulp.task('images', function () {
         .pipe(gulp.dest('./dist'));
 })
 
-gulp.task('build', ['css', 'html', 'js', 'images'], () => {
+gulp.task('build', ['css', 'utilcss', 'html', 'js', 'images'], () => {
     console.log('build done')
 })
 

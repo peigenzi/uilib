@@ -1,0 +1,21 @@
+%grid-column {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+}
+
+%one-px {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $blineColor;
+    }
+}
