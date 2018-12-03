@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+@keyframes shake {
+
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    40%,
+    70%
+     {
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    50%,
+    80% {
+        transform: translate3d(10px, 0, 0);
+    }
+}
+
+.#{$apre}shake {
+    animation-name: shake;
+}

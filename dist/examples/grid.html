@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid</title>
+    <link rel="stylesheet" href="../scss/ui.css">
+    <style>
+        .box {
+            background: orange;
+            height: 150px;
+            border: 1px solid #000;
+        }
+
+        .tf {
+            margin-top: 20px;
+        }
+
+        .tf__title {
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            font-size: 18px;       
+        }
+        @media (max-width: 480px) {
+            .tf__title {
+                text-align: left;
+            }
+        }
+        
+        input {
+            width: 100%;
+            height: 40px;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .wrap__item {
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ui-wrap">
+        <div class="ui-row">
+            <div class="ui-col-xs-12 ui-col-sm-6  ui-col-md-3 box">.col-xs-6 .col-md-4</div>
+            <div class="ui-col-xs-12 ui-col-sm-6  ui-col-md-3 box">.col-xs-6 .col-md-4</div>
+            <div class="ui-col-xs-12 ui-col-sm-6  ui-col-md-3 box">.col-xs-6 .col-md-4</div>
+            <div class="ui-col-xs-12 ui-col-sm-6  ui-col-md-3 box">.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="ui-row">
+            <div class="box ui-col-xs-12 ui-col-sm-4 ui-col-md-3 ui-col-sm-offset-2 ui-col-md-offset-3">.col-md-3
+                .col-md-offset-3</div>
+            <div class="box ui-col-xs-12 ui-col-sm-4 ui-col-md-3">.col-md-3 .col-md-offset-3</div>
+        </div>
+        <div class="ui-row">
+            <div class="box ui-col-xs-9 ui-col-lg-push-3">.col-md-9 .col-md-push-3</div>
+            <div class="box ui-col-xs-3 ui-col-lg-pull-9">.col-md-3 .col-md-pull-9</div>
+        </div>
+    </div>
+    <div class="ui-wrap tf">
+        <div class="ui-row">
+            <div class="ui-col-xs-12 ui-col-sm-2 tf__title">name:</div>
+            <div class="ui-col-xs-12 ui-col-sm-10"><input type="text"></div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="wrap__item pixel-border-r pixel-border-bb">1</div>
+        <div class="wrap__item" style="border-bottom: 1px solid #e5e5e5">2</div>
+        <div class="wrap__item">3</div>
+    </div>
+</body>
+
+</html>

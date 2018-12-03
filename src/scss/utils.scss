@@ -130,7 +130,15 @@
     align-items: center !important;
 }
 
+.img-responsive {
+    @include img-responsive();
+}
 
+.center-block {
+    @include center-block();
+}
+
+// 布局
 .f-ldrz {
     @include f-ldrz();
 }

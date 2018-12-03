@@ -359,6 +359,20 @@
     white-space: nowrap;
 }
 
+// 响应式图片
+@mixin img-responsive() {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// 内容块居中
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 //常见布局
 //含有调试用的代码

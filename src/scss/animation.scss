@@ -28,6 +28,40 @@
     }
 }
 
+// 颤抖
+.#{$apre}shake {
+    animation: $shake-s linear both;
+}
+
+// 闪烁
+.#{$apre}flash {
+    animation: $flash-s linear both;
+}
+
+//跳动
+.#{$apre}bounce {
+    animation: $bounce-s ease-out both;
+}
+
+//摇摆
+.#{$apre}swing {
+    animation: $swing-s linear both;
+}
+
+//凝胶
+.#{$apre}jello {
+    animation: $jello-s linear both;
+}
+
+.#{$apre}rubber {
+    animation: $rubber-s linear both;
+}
+
 @import './animation/fade.scss';
 @import './animation/bounce.scss';
-
+@import './animation/attention/shake.scss';
+@import './animation/attention/flash.scss';
+@import './animation/attention/bounce.scss';
+@import './animation/attention/swing.scss';
+@import './animation/attention/jello.scss';
+@import './animation/attention/rubber.scss';

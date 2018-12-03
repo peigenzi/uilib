@@ -89,6 +89,61 @@
     }
 }
 
+//5 列跟 8 列
+@each $i in 2.4 {
+    .#{$pre}col-sm-2-4 {
+        @include make-sm-column($i);
+    }
+
+    .#{$pre}col-sm-offset-2-4 {
+        @include make-sm-column-offset($i);
+    }
+
+    .#{$pre}col-sm-push-2-4 {
+        @include make-sm-column-push($i);
+    }
+
+    .#{$pre}col-sm-pull-2-4 {
+        @include make-sm-column-pull($i);
+    }
+
+
+    .#{$pre}col-md-2-4 {
+        @include make-md-column($i);
+    }
+
+    .#{$pre}col-md-offset-2-4 {
+        @include make-md-column-offset($i);
+    }
+
+    .#{$pre}col-md-push-2-4 {
+        @include make-md-column-push($i);
+    }
+
+    .#{$pre}col-md-pull-2-4 {
+        @include make-md-column-pull($i);
+    }
+
+
+
+
+    .#{$pre}col-lg-2-4 {
+        @include make-lg-column($i);
+    }
+
+    .#{$pre}col-lg-offset-2-4 {
+        @include make-lg-column-offset($i);
+    }
+
+    .#{$pre}col-lg-push-2-4 {
+        @include make-lg-column-push($i);
+    }
+
+    .#{$pre}col-lg-pull-2-4 {
+        @include make-lg-column($i);
+    }
+}
+
 // @each $type in sm,
 // md,
 // lg {

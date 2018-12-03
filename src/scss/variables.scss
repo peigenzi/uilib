@@ -30,11 +30,36 @@ $fsbase: 16px;
 
 //动画前缀
 $apre: 'a-';
+
+// 动画持续时间
+$a-time: .75s;
+
 // 淡入时间
-$fade-in-s: .75s;
+$fade-in-s: $a-time;
+
 //淡出时间
 $fade-out-s: .5s;
+
 //弹入时间
-$bounce-in-s: .75s;
+$bounce-in-s: $a-time;
+
 //弹出时间
 $bounce-out-s: 1s;
+
+//颤抖时间
+$shake-s: $a-time;
+
+// 闪烁时间
+$flash-s: $a-time;
+
+// 跳动时间
+$bounce-s: $a-time;
+
+//摇摆时间
+$swing-s: $a-time;
+
+// 凝胶时间
+$jello-s: $a-time;
+
+//橡皮筋时间
+$rubber-s: $a-time;

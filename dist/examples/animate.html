@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>动画</title>
+        <link rel="stylesheet" href="../scss/ui.css" />
+        <style>
+            .g-hd {
+                margin-bottom: 20px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 28px;
+            }
+
+            .g-bd {
+                max-width: 1100px;
+                overflow: hidden;
+            }
+
+            .type-list {
+                margin-bottom: 35px;
+            }
+
+            .m-tt {
+                padding-left: 10px;
+                margin-bottom: 10px;
+                line-height: 24px;
+                font-size: 16px;
+                font-weight: bold;
+                border-bottom: 1px solid #888;
+            }
+
+            .m-animate-item {
+                width: 100%;
+                height: 120px;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+
+            .m-animate-item .box {
+                width: 100%;
+                height: 90px;
+                background: #3385ff;
+                border-radius: 5px;
+            }
+
+            .m-animate-item .desc {
+                position: relative;
+                z-index: 1;
+                line-height: 30px;
+                text-align: center;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="g-hd"><h1>动画示例</h1></div>
+        <div class="g-bd center-block">
+            <div class="ui-wrap type-list">
+                <div class="ui-row">
+                    <div class="ui-col-xs-12">
+                        <div class="m-tt">提醒类动画</div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce"></div>
+                            <div class="desc">跳动(a-bounce)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="flash"></div>
+                            <div class="desc">闪烁(a-flash)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="shake"></div>
+                            <div class="desc">颤抖(a-shake)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="swing"></div>
+                            <div class="desc">摇摆(a-swing)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="jello"></div>
+                            <div class="desc">凝胶(a-jello)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="rubber"></div>
+                            <div class="desc">橡皮筋(a-rubber)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-wrap type-list">
+                <div class="ui-row">
+                    <div class="ui-col-xs-12">
+                        <div class="m-tt">跳动类动画</div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-in"></div>
+                            <div class="desc">跳入(a-bounce-in)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-in-left"></div>
+                            <div class="desc">左跳入(a-bounce-in-left)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-in-right"></div>
+                            <div class="desc">右跳入(a-bounce-in-right)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-in-down"></div>
+                            <div class="desc">下跳入(a-bounce-in-down)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-in-up"></div>
+                            <div class="desc">上跳入(a-bounce-in-up)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-out"></div>
+                            <div class="desc">跳出(a-bounce-out)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-out-left"></div>
+                            <div class="desc">左跳出(a-bounce-out-left)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div
+                                class="box"
+                                data-atype="bounce-out-right"
+                            ></div>
+                            <div class="desc">右跳出(a-bounce-out-right)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-out-down"></div>
+                            <div class="desc">下跳出(a-bounce-out-down)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="bounce-out-up"></div>
+                            <div class="desc">上跳出(a-bounce-out-up)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-wrap type-list">
+                <div class="ui-row">
+                    <div class="ui-col-xs-12">
+                        <div class="m-tt">淡入淡出类动画</div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-in"></div>
+                            <div class="desc">淡入(a-fade-in)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-in-left"></div>
+                            <div class="desc">左淡入(a-fade-in-left)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-in-right"></div>
+                            <div class="desc">右淡入(a-fade-in-right)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-in-down"></div>
+                            <div class="desc">下淡入(a-fade-in-down)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-in-up"></div>
+                            <div class="desc">上淡入(a-fade-in-up)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-out"></div>
+                            <div class="desc">淡出(a-fade-out)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-out-left"></div>
+                            <div class="desc">左淡出(a-fade-out-left)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-out-right"></div>
+                            <div class="desc">右淡出(a-fade-out-right)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-out-down"></div>
+                            <div class="desc">下淡出(a-fade-out-down)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="fade-out-up"></div>
+                            <div class="desc">上淡出(a-fade-out-up)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
+
+        <script>
+            let colors = ['#3385ff', '#fabc22', '#ec4235'];
+
+            document
+                .querySelectorAll('.m-animate-item .box')
+                .forEach((v, i) => {
+                    v.style.background = colors[i % 3];
+                });
+
+            $('.m-animate-item .desc').hover(
+                e => {
+                    let el = e.target.previousElementSibling;
+                    let name = el.dataset.atype;
+                    let cls = 'a-' + name;
+
+                    el.classList.add(cls);
+                },
+                e => {
+                    let el = e.target.previousElementSibling;
+
+                    el.className = '';
+                    el.classList.add('box');
+                }
+            );
+        </script>
+    </body>
+</html>
