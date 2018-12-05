@@ -89,7 +89,7 @@
     }
 }
 
-//5 列跟 8 列
+//5 列
 @each $i in 2.4 {
     .#{$pre}col-sm-2-4 {
         @include make-sm-column($i);
@@ -108,6 +108,7 @@
     }
 
 
+    
     .#{$pre}col-md-2-4 {
         @include make-md-column($i);
     }
@@ -123,7 +124,6 @@
     .#{$pre}col-md-pull-2-4 {
         @include make-md-column-pull($i);
     }
-
 
 
 

@@ -9,7 +9,7 @@ module.exports = {
         },
         {
           text: '关于',
-          link: '/about'
+          link: '/'
         }
         // {
         //   text: 'Languages',
@@ -33,6 +33,7 @@ module.exports = {
             '/doc/css规范.md',
             '/doc/栅格布局.md',
             '/doc/常见布局.md',
+            '/doc/表格.md',
             '/doc/工具类.md',
             '/doc/动画.md'
           ]

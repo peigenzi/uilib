@@ -1,0 +1,282 @@
+table {
+    max-width: 100%;
+    background-color: $table-bg;
+}
+
+th {
+    text-align: left;
+}
+
+// 基准样式
+.table {
+    width: 100%;
+    margin-bottom: 10px;
+
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+
+            >th,
+            >td {
+                padding: $table-cell-padding;
+                line-height: $line-height-base;
+                vertical-align: top;
+                border-top: 1px solid $table-border-color;
+            }
+        }
+    }
+
+    // 表头下边框
+    thead>tr>th {
+        vertical-align: bottom;
+        border-bottom: 1px solid $table-border-color;
+    }
+
+    //有标题时移除默认的顶部边框
+    caption+thead,
+    colgroup+thead,
+    thead:first-child {
+        tr:first-child {
+
+            th,
+            td {
+                border-top: 0;
+            }
+        }
+    }
+
+    tbody+tbody {
+        border-top: 2px solid $table-border-color;
+    }
+
+    // 嵌套
+    .table {
+        background-color: $table-bg;
+    }
+}
+
+//紧凑型表格
+.table-condensed {
+
+    thead,
+    tbody,
+    tfoot {
+        >tr {
+
+            >th,
+            >td {
+                padding: $table-condensed-cell-padding
+            }
+        }
+    }
+}
+
+// 全边框表格
+.table-bordered {
+    border: 1px solid $table-border-color;
+
+    >thead,
+    >tbody,
+    >tfoot {
+        >tr {
+
+            >th,
+            >td {
+                border: 1px solid $table-border-color;
+            }
+        }
+    }
+
+    >thead {
+        >tr {
+
+            >th,
+            >td {
+                border-bottom-width: 1px;
+            }
+        }
+    }
+}
+
+// 条纹状表格
+.table-striped {
+    >tbody {
+        >tr:nth-child(odd) {
+
+            >td,
+            >th {
+                background-color: $table-bg-accent;
+            }
+        }
+    }
+}
+
+// hover样式
+.table-hover {
+    >tbody {
+        >tr:hover {
+
+            >td,
+            >th {
+                background: $table-bg-hover;
+            }
+        }
+    }
+}
+
+table col[class*="col-"] {
+    float: none;
+    display: table-column;
+}
+
+table {
+
+    td,
+    th {
+        &[class*="col-"] {
+            float: none;
+            display: table-cell;
+        }
+    }
+}
+
+// 表头固定
+.head-fixed {
+    border-bottom: 1px solid $table-border-color;
+
+    >table {
+        margin-bottom: 0;
+
+        >thead {
+            >tr {
+
+                >th,
+                >td {
+                    width: 120px;
+                }
+
+                th:last-child,
+                td:last-child {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .scroll {
+        max-height: 100px;
+        overflow-y: auto;
+
+        >table {
+            margin-bottom: 0;
+            border-top: 0;
+            border-bottom: 0;
+
+            >tbody,
+            >tfoot {
+                >tr {
+
+                    >th,
+                    >td {
+                        width: 120px;
+                    }
+
+                    th:last-child,
+                    td:last-child {
+                        width: auto;
+                    }
+                }
+
+                tr:first-child {
+
+                    >th,
+                    >td {
+                        border-top: 0;
+                    }
+                }
+
+                tr:last-child {
+
+                    >th,
+                    >td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// .table>thead>tr,
+// .table>tbody>tr,
+// .table>tfoot>tr {
+
+//     >td.active,
+//     >th.active,
+//     &.active>td,
+//     &.active>th {
+//         background-color: $table-bg-active;
+//     }
+// }
+
+// 响应式表格
+@media (max-width: $screen-sm) {
+    .table-responsive {
+        width: 100% !important;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        border: 1px solid $table-border-color;
+
+        >.table {
+            margin-bottom: 0;
+            background-color: #fff;
+
+            // 确保内容没有折叠
+            >thead,
+            >tbody,
+            >tfoot {
+                >tr {
+
+                    >th,
+                    >td {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        >.table-bordered {
+            // border: 0;
+
+            >thead,
+            >tbody,
+            >tfoot {
+                >tr {
+
+                    >th:first-child,
+                    >td:first-child {
+                        border-left: 0;
+                    }
+
+                    >th:last-child,
+                    >td:last-child {
+                        border-right: 0;
+                    }
+                }
+
+                >tr:last-child {
+
+                    >th,
+                    >td {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

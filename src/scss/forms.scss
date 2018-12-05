@@ -1,0 +1,68 @@
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+.form-control {
+    @include placeholder();
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: $input-height-base;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    background-color: $input-bg;
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius;
+    box-shadow: inset 0 1px 1px rgba($color: #000000, $alpha: .075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+    @include form-control-focus();
+
+    &[disabled],
+    &[readonly] {
+        cursor: not-allowed;
+        background-color: $input-bg-disabled;
+    }
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.radio,
+.checkbox {
+    display: block;
+    min-height: $line-height-computed;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+
+    label {
+        display: inline;
+        font-weight: normal;
+        cursor: pointer;
+    }
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    float: left;
+    margin-left: -20px;
+}

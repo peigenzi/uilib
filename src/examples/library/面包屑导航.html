@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面包屑导航</title>
+    <link rel="stylesheet" href="../../scss/ui.min.css">
+    <style>
+        .m-crumb {
+            overflow: hidden;
+            line-height: 1.5;
+            margin-left: 40px;
+        }
+
+        .m-crumb ul {
+            margin-left: -20px;
+        }
+
+        .m-crumb li {
+            float: left;
+            word-wrap: normal;
+            white-space: nowrap;
+            list-style-type: none;
+        }
+
+        .m-crumb li::before {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+            content: '|';
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        /* 箭头分隔 */
+        .m-crumb-arr li:before {
+            content: '\3E';
+        }
+
+        /* 空白分隔 */
+        .m-crumb-blank ul {
+            margin-left: -10px;
+        }
+
+        .m-crumb-blank li:before {
+            width: 10px;
+            content: '';
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="m-crumb">
+        <ul class="clearfix">
+            <li><a href="#">面包屑导航，竖线分隔</a></li>
+            <li><a href="#">面包屑，可多行</a></li>
+            <li><a href="#">面包屑1</a></li>
+            <li><a href="#">面包屑2</a></li>
+            <li><a href="#">面包屑3</a></li>
+            <li>文字</li>
+        </ul>
+    </nav>
+
+    <nav class="m-crumb m-crumb-arr">
+        <ul class="clearfix">
+            <li><a href="#">面包屑导航，箭头分隔</a></li>
+            <li><a href="#">面包屑，可多行</a></li>
+            <li><a href="#">面包屑1</a></li>
+            <li><a href="#">面包屑2</a></li>
+            <li><a href="#">面包屑3</a></li>
+            <li>文字</li>
+        </ul>
+    </nav>
+
+    <nav class="m-crumb m-crumb-blank">
+        <ul class="clearfix">
+            <li><a href="#">面包屑导航，空白分隔</a></li>
+            <li><a href="#">面包屑，可多行</a></li>
+            <li><a href="#">面包屑1</a></li>
+            <li><a href="#">面包屑2</a></li>
+            <li><a href="#">面包屑3</a></li>
+            <li>文字</li>
+        </ul>
+    </nav>
+</body>
+
+</html>

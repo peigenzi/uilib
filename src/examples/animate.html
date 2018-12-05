@@ -16,7 +16,7 @@
 
             .g-bd {
                 max-width: 1100px;
-                overflow: hidden;
+                /* overflow: hidden; */
             }
 
             .type-list {
@@ -249,6 +249,65 @@
                     </div>
                 </div>
             </div>
+            <div class="ui-wrap type-list">
+                <div class="ui-row">
+                    <div class="ui-col-xs-12">
+                        <div class="m-tt">移入移出类动画</div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-in-left"></div>
+                            <div class="desc">左移入(a-slide-in-left)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-in-right"></div>
+                            <div class="desc">右移入(a-slide-in-right)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-in-down"></div>
+                            <div class="desc">下移入(a-slide-in-down)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-in-up"></div>
+                            <div class="desc">上移入(a-slide-in-up)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-row">
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-out-left"></div>
+                            <div class="desc">左移出(a-slide-out-left)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-out-right"></div>
+                            <div class="desc">右移出(a-slide-out-right)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-out-down"></div>
+                            <div class="desc">下移出(a-slide-out-down)</div>
+                        </div>
+                    </div>
+                    <div class="ui-col-xs-6 ui-col-sm-3 ui-col-md-2-4">
+                        <div class="m-animate-item">
+                            <div class="box" data-atype="slide-out-up"></div>
+                            <div class="desc">上移出(a-slide-out-up)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.min.js"></script>
@@ -268,11 +327,15 @@
                     let name = el.dataset.atype;
                     let cls = 'a-' + name;
 
+                    el.style.position = 'relative';
+                    el.style.zIndex = 1;
                     el.classList.add(cls);
                 },
                 e => {
                     let el = e.target.previousElementSibling;
 
+                    el.style.position = 'static';
+                    el.style.zIndex = 'auto';
                     el.className = '';
                     el.classList.add('box');
                 }

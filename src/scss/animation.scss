@@ -1,4 +1,4 @@
-@import './variables.scss';
+// @import './variables.scss';
 
 //淡入
 @each $name in fade-in, fade-in-down, fade-in-up, fade-in-left, fade-in-right {
@@ -25,6 +25,20 @@
 @each $name in bounce-out, bounce-out-down, bounce-out-up, bounce-out-left, bounce-out-right {
     .#{$apre}#{$name} {
         animation: $bounce-out-s ease-in forwards;
+    }
+}
+
+// 移入
+@each $name in slide-in-down, slide-in-up, slide-in-left, slide-in-right {
+    .#{$apre}#{$name} {
+        animation: $slide-in-s ease-out backwards;
+    }
+}
+
+//移出
+@each $name in slide-out-down, slide-out-up, slide-out-left, slide-out-right {
+    .#{$apre}#{$name} {
+        animation: $slide-out-s ease-in forwards;
     }
 }
 
@@ -59,6 +73,7 @@
 
 @import './animation/fade.scss';
 @import './animation/bounce.scss';
+@import './animation/slide.scss';
 @import './animation/attention/shake.scss';
 @import './animation/attention/flash.scss';
 @import './animation/attention/bounce.scss';
