@@ -1,0 +1,98 @@
+// 常见布局
+// 含有调试用的代码
+// 两列左侧定宽右侧自适应
+@mixin f-ldrz($left: 230px) {
+    @include clearfix();
+    .g-sd {
+        position: relative; /* 提升层叠顺序，避免被 g-mn 覆盖 */
+        float: left;
+        width: $left;
+        margin-right: -($left);
+        background: yellow;
+    }
+    .g-mn {
+        float: right;
+        width: 100%;
+    }
+    .g-mnc {
+        margin-left: ($left + 10px);
+        background: #3385ff;
+    }
+    p {
+        height: 300px;
+    }
+}
+// 两列左侧自适应右侧定宽
+@mixin f-lzrd($right: 230px) {
+    @include clearfix();
+    .g-sd {
+        position: relative;
+        float: right;
+        width: $right;
+        margin-left: -($right);
+        background: yellow;
+    }
+    .g-mn {
+        float: left;
+        width: 100%;
+    }
+    .g-mnc {
+        margin-right: ($right + 10px);
+        background: #3385ff;
+    }
+    p {
+        height: 300px;
+    }
+}
+// 三列左右定宽中间自适应
+@mixin f-zdczrd($width: 230px) {
+    @include clearfix();
+    .g-sd1 {
+        position: relative;
+        float: left;
+        width: $width;
+        margin-right: -($width);
+        background: yellow;
+    }
+    .g-sd2 {
+        position: relative;
+        float: right;
+        width: $width;
+        margin-left: -($width);
+        background: green;
+    }
+    .g-mn {
+        float: left;
+        width: 100%;
+    }
+    .g-mnc {
+        margin-left: ($width + 10px);
+        margin-right: ($width + 10px);
+        background: #3385ff;
+    }
+    p {
+        height: 300px;
+    }
+}
+@mixin full-window() {
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
+// 底部粘连布局
+@mixin sticky-ft($height: 60px) {
+    .g-doc {
+        position: relative;
+        min-height: 100%;
+    }
+    .g-bd {
+        padding: 0 0 $height;
+    }
+    .g-ft {
+        height: ($height - 10px);
+        margin: -($height - 10px) 0 0;
+    }
+}

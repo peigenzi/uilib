@@ -1,6 +1,5 @@
 //全局变量
 
-
 // 类前缀名
 $pre: 'ui-';
 
@@ -17,6 +16,8 @@ $screen-xs-max: ($screen-xs - 1);
 $screen-sm-max: ($screen-sm - 1);
 $screen-md-max: ($screen-md - 1);
 
+$screen-tablet: $screen-sm;
+
 //1像素边框颜色
 $bline-color: #e5e5e5;
 
@@ -29,6 +30,13 @@ $mpunit: 8px;
 $fslen: 42;
 //工具类基准字体
 $fsbase: 16px;
+
+//色彩
+$brand-primary:#428bca;
+$brand-success:#5cb85c;
+$brand-warning:#f0ad4e;
+$brand-danger:#d9534f;
+$brand-info:#5bc0de;
 
 //gray
 //------------------------------------
@@ -96,6 +104,35 @@ $input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2);
 $input-height-small: (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
 $input-height-large: (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2);
 
+// 按钮
+// -----------------------------------------
+$btn-font-weight: normal;
+
+$btn-default-color: #333;
+$btn-default-bg: #fff;
+$btn-default-border: #ccc;
+
+$btn-primary-color: #fff;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: darken($brand-primary, 5%);
+
+$btn-success-color: #fff;
+$btn-success-bg: $brand-success;
+$btn-success-border: darken($brand-success, 5%);
+
+$btn-warning-color: #fff;
+$btn-warning-bg: $brand-warning;
+$btn-warning-border: darken($brand-warning, 5%);
+
+$btn-danger-color: #fff;
+$btn-danger-bg: $brand-danger;
+$btn-danger-border: darken($brand-danger, 5%);
+
+$btn-info-color: #fff;
+$btn-info-bg: $brand-info;
+$btn-info-border: darken($brand-info, 5%);
+
+$btn-link-disabled-color: $gray-light;
 
 // 动画相关
 // ---------------------------------------

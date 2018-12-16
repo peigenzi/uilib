@@ -1,0 +1,53 @@
+// 边距
+@mixin make-p-t($mpunit, $i) {
+    padding-top: ($mpunit * $i) !important;
+}
+
+@mixin make-p-r($mpunit, $i) {
+    padding-right: ($mpunit * $i) !important;
+}
+
+@mixin make-p-b($mpunit, $i) {
+    padding-bottom: ($mpunit * $i) !important;
+}
+
+@mixin make-p-l($mpunit, $i) {
+    padding-left: ($mpunit * $i) !important;
+}
+
+@mixin make-p-x($mpunit, $i) {
+    padding-left: ($mpunit * $i) !important;
+    padding-right: ($mpunit * $i) !important;
+}
+
+@mixin make-p-y($mpunit, $i) {
+    padding-top: ($mpunit * $i) !important;
+    padding-bottom: ($mpunit * $i) !important;
+}
+
+//外边距
+@mixin make-m-t($mpunit, $i) {
+    margin-top: ($mpunit * $i) !important;
+}
+
+@mixin make-m-r($mpunit, $i) {
+    margin-right: ($mpunit * $i) !important;
+}
+
+@mixin make-m-b($mpunit, $i) {
+    margin-bottom: ($mpunit * $i) !important;
+}
+
+@mixin make-m-l($mpunit, $i) {
+    margin-left: ($mpunit * $i) !important;
+}
+
+@mixin make-m-x($mpunit, $i) {
+    margin-left: ($mpunit * $i) !important;
+    margin-right: ($mpunit * $i) !important;
+}
+
+@mixin make-m-y($mpunit, $i) {
+    margin-top: ($mpunit * $i) !important;
+    margin-bottom: ($mpunit * $i) !important;
+}

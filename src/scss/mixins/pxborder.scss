@@ -1,0 +1,152 @@
+@mixin px-border-t() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-b() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-l() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+@mixin px-border-r() {
+    & {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+//第二条
+@mixin px-border-tt() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-bb() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        height: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: scaleY(0.5);
+    }
+}
+
+@mixin px-border-ll() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}
+
+@mixin px-border-rr() {
+    & {
+        position: relative;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+        background-color: $bline-color;
+        width: 1px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: scaleX(0.5);
+    }
+}

@@ -1,7 +1,9 @@
 label {
     display: inline-block;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
 }
 
 select[multiple],
@@ -24,8 +26,8 @@ select[size] {
     background-color: $input-bg;
     border: 1px solid $input-border;
     border-radius: $input-border-radius;
-    box-shadow: inset 0 1px 1px rgba($color: #000000, $alpha: .075);
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    box-shadow: inset 0 0px 1px rgba($color: #000000, $alpha: 0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
     @include form-control-focus();
 
@@ -40,10 +42,79 @@ textarea.form-control {
     height: auto;
 }
 
+.input-sm {
+    @include input-size(
+        $input-height-small,
+        $padding-small-vertical,
+        $padding-small-horizontal,
+        $font-size-small,
+        $line-height-small,
+        $border-radius-small
+    );
+}
+.input-lg {
+    @include input-size(
+        $input-height-large,
+        $padding-large-vertical,
+        $padding-large-horizontal,
+        $font-size-large,
+        $line-height-large,
+        $border-radius-large
+    );
+}
+textarea.input-sm {
+    @include input-size(
+        $input-height-small,
+        $padding-small-vertical,
+        $padding-small-horizontal,
+        $font-size-small,
+        $line-height-small,
+        $border-radius-small
+    );
+    height: auto;
+}
+textarea.input-lg {
+    @include input-size(
+        $input-height-large,
+        $padding-large-vertical,
+        $padding-large-horizontal,
+        $font-size-large,
+        $line-height-large,
+        $border-radius-large
+    );
+    height: auto;
+}
+select.input-sm {
+    @include input-size(
+        $input-height-small,
+        $padding-small-vertical,
+        $padding-small-horizontal,
+        $font-size-small,
+        $line-height-small,
+        $border-radius-small
+    );
+    height: auto;
+    line-height: $input-height-small;
+}
+select.input-lg {
+    @include input-size(
+        $input-height-large,
+        $padding-large-vertical,
+        $padding-large-horizontal,
+        $font-size-large,
+        $line-height-large,
+        $border-radius-large
+    );
+    height: auto;
+    line-height: $input-height-large;
+}
+.form-control-static {
+    margin-bottom: 0;
+    // padding-top: ($padding-base-vertical + 1);
+}
 .form-group {
     margin-bottom: 15px;
 }
-
 .radio,
 .checkbox {
     display: block;
@@ -51,18 +122,129 @@ textarea.form-control {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 20px;
-
+    font-weight: normal;
     label {
         display: inline;
         font-weight: normal;
         cursor: pointer;
     }
 }
-
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
+.radio input[type='radio'],
+.radio-inline input[type='radio'],
+.checkbox input[type='checkbox'],
+.checkbox-inline input[type='checkbox'] {
     float: left;
     margin-left: -20px;
+    // margin-top: 1px;
 }
+.radio-inline,
+.checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px;
+}
+.form-inline {
+    @media (min-width: $screen-sm) {
+        .form-group {
+            display: inline-block;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        .form-control {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+        .radio,
+        .checkbox {
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        .radio input[type='radio'],
+        .checkbox input[type='checkbox'] {
+            float: none;
+            margin-left: 0;
+        }
+    }
+}
+// 水平排列的表单
+.form-responsive {
+    .radio,
+    .checkbox,
+    .radio-inline,
+    .checkbox-inline {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: ($padding-base-vertical + 1);
+    } // 让里面的元素可以使用栅格类
+    .form-group {
+        @include make-row();
+    }
+    @media (min-width: $screen-tablet) {
+        .control-label {
+            text-align: right;
+        }
+    }
+}
+
+// 各浏览器表现不一样
+// .beauty {
+//     label {
+//         display: inline-block;
+//     }
+//     // 多选
+//     input[type='checkbox'] {
+//         display: none;
+//     }
+//     input[type='checkbox'] + label:before {
+//         display: inline-block;
+//         content: '\2713';
+//         height: 14px;
+//         width: 14px;
+//         margin: 0 5px 0 0;
+//         color: transparent;
+//         border: 1px solid #000;
+//         font-size: 14px;
+//         line-height: 14px;
+//         text-align: center;
+//         vertical-align: baseline;
+//         // vertical-align: middle;
+//         transition: color ease 0.2s;
+//     }
+//     input[type='checkbox']:checked + label:before {
+//         color: #000;
+//     } 
+//     // 单选
+//     input[type='radio'] {
+//         display: none;
+//     }
+//     input[type='radio'] + label:before {
+//         display: inline-block;
+//         content: '\26AB';
+//         width: 24px;
+//         height: 24px;
+//         margin: 0 5px 0 0;
+//         font-size: 12px;
+//         color: transparent;
+//         text-align: center;
+//         line-height: 24px;
+//         vertical-align: baseline;
+//         vertical-align: middle;
+//         border: 1px solid #000;
+//         border-radius: 50%;
+//         transition: color ease 0.2s;
+//     }
+//     input[type='radio']:checked + label:before {
+//         color: #000;
+//     }
+// }

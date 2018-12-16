@@ -1,0 +1,95 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.btn {
+    display: inline-block;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    margin-bottom: 0;
+    font-size: $font-size-base;
+    font-weight: $btn-font-weight;
+    line-height: $line-height-base;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: $border-radius-base;
+    white-space: nowrap;
+    user-select: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        box-shadow: 0 0px 2px rgba($color: #333, $alpha: 0.5);
+    }
+
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: 0.65;
+        box-shadow: none;
+    }
+}
+
+.btn-primary {
+    @include button-variant(
+        $btn-primary-color,
+        $btn-primary-bg,
+        $btn-primary-border
+    );
+}
+.btn-success {
+    @include button-variant(
+        $btn-success-color,
+        $btn-success-bg,
+        $btn-success-border
+    );
+}
+.btn-warning {
+    @include button-variant(
+        $btn-warning-color,
+        $btn-warning-bg,
+        $btn-warning-border
+    );
+}
+.btn-danger {
+    @include button-variant(
+        $btn-danger-color,
+        $btn-danger-bg,
+        $btn-danger-border
+    );
+}
+.btn-info {
+    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-sm {
+    @include button-size(
+        $padding-small-vertical,
+        $padding-small-horizontal,
+        $font-size-small,
+        $line-height-small,
+        $border-radius-small
+    );
+}
+.btn-lg {
+    @include button-size(
+        $padding-large-vertical,
+        $padding-large-horizontal,
+        $font-size-large,
+        $line-height-large,
+        $border-radius-large
+    );
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}

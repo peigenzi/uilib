@@ -34,6 +34,7 @@ module.exports = {
             '/doc/栅格布局.md',
             '/doc/常见布局.md',
             '/doc/表格.md',
+            '/doc/表单.md', 
             '/doc/工具类.md',
             '/doc/动画.md'
           ]
